@@ -1,8 +1,8 @@
 # ANLY-506-51--B-2019-Code-Portfoio-Hanzhi-He
 INTRO:
-This is my code portfolio for Exploratory Data Analytics course at Harrisburg University. During the course I have learnt how to use R to tackle raw datasets and conduct analysis. Moreover, I have learnt how to perfrom Exploratory Data Analytics, which will be a foundation to all the future data analysis I will conduct.
+This is my code portfolio for Exploratory Data Analytics course at Harrisburg University. I am glad that I made a right decision to attend this course taught by Dr. Scrivner. Many thanks to Dr. Scrivner for providing so much valuable course materials. During the course I have learnt how to use R to tackle raw datasets and conduct analysis. Moreover, I have learnt how to perfrom Exploratory Data Analytics, which will be a foundation to all the future data analysis I will conduct.
 
-I have not only practiced codes from data imports, wrangling, descriptive analysis, and plotting basic visualization, but also learnt how to do clustering using K-means method. Plus, I've learnt how to do Principal component analysis. The coding experience and knowledge I gained from this course will support me in my future study at HU and my future career as a business professional. I am glad that I have chosen the course taught by Dr. Scrivner.
+I have not only practiced codes from data imports, wrangling, descriptive analysis, and plotting basic visualization, but also learnt how to do clustering using K-means method. Plus, I've learnt how to do Principal component analysis. The coding experience and knowledge I gained from this course will support me in my future study at HU and my future career as a business professional.
 
 The code portfolio includes my work performed with instructions from following textbooks:
 1. Peng (Exploratory Data Analysis), 
