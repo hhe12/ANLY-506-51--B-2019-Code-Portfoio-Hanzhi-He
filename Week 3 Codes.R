@@ -15,9 +15,9 @@ head(USEPA[, c(6:7, 10)])
 tail(USEPA[, c(6:7, 10)])
 table(USEPA$Latitude)
 
-#find observations which are measured at latitude 37.1655
+#find observations which are measured at latitude tail(USEPA$Latitude,1), or 32.46639
 library(dplyr)
-filter(USEPA, Latitude == "37.1655") %>% select(`Sample.Duration`,`Arithmetic.Mean`)
+filter(USEPA, Latitude == tail(USEPA$Latitude,1)) %>% select(`Sample.Duration`,`Arithmetic.Mean`)
 
 #find out the data points with below selection 
 filter(USEPA, USEPA$'State.Code' == "01" & USEPA$'County.Code' == "049") %>% select(`Sample.Duration`,`Arithmetic.Mean`) %>% as.data.frame
