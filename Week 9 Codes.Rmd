@@ -1,0 +1,79 @@
+---
+title: "EDA Week 9 Code Portfolio — Hanzhi He"
+author: "HANZHI"
+date: "7/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is one of the R Markdown documents for Hanzhi's code portfolio from Week 7 to 12. 
+
+Week 9
+
+Random sampling
+
+
+```{r }
+sample(1:1000, 10)
+set.seed(332)
+
+## applying Sample function in R to mt cars table to extract 5 sample rows
+set.seed(123)
+index<-sample(1:nrow(mtcars), 5)
+mtcars[index,]
+
+```
+
+Chapter 7 Plotting Systems
+
+```{r airquality}
+#Plot using the basic plotting system in R, with plot() and lines()
+data(airquality)
+with(airquality, {plot(Temp, Ozone)+lines(loess.smooth(Temp, Ozone))})
+
+# Plot another scatter plot with codes:
+data(cars)
+ with(cars, plot(speed, dist))
+title("Speed vs. Stopping distance")
+
+# Plot with the lattice system
+#Lattice plots is most useful for looking at milti dimensional data
+library(lattice)
+state <- data.frame(state.x77, region = state.region)
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(4, 1))
+
+# I have covered ggplot2 in week 7 so skipping the rest part about ggplot2 in chapter 7
+
+```
+
+
+Chapter 8 Graphics Devices
+
+```{r datasets, echo=FALSE}
+# plot and make it appear on screen with a title
+with(faithful, plot(eruptions, waiting)) 
+title(main = "Old Faithful Geyser data")
+
+# How to plot and save it in a pdf file -- a most commonly used yet basic approach
+pdf(file = "myplot.pdf")  
+with(faithful, plot(eruptions, waiting))  
+title(main = "Old Faithful Geyser data")  
+dev.off()  
+
+library(datasets)
+
+## Create plot on screen device and copy it to a png file
+
+with(faithful, plot(eruptions, waiting))  
+title(main = "Old Faithful Geyser data")  
+dev.copy(png, file = "geyserplot.png")  
+dev.off()
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
